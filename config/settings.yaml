@@ -1,0 +1,6 @@
+repository-url:    https://github.com/ptkato/blogful.git
+working-directory: .
+
+approot:           http://localhost:3000
+port:              3000
+

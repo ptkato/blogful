@@ -1,0 +1,39 @@
+name:    blogful
+version: "0.0.0"
+
+dependencies:
+- base
+- yesod
+- yesod-core
+- yesod-markdown
+- aeson
+- text
+- time
+- pandoc
+- process
+- filepath
+- directory
+- yaml
+
+default-extensions:
+- RecordWildCards
+- OverloadedStrings
+- TemplateHaskell
+- QuasiQuotes
+
+# The library contains all of our application code. The executable
+# defined below is just a thin wrapper.
+library:
+  source-dirs: src
+
+# Runnable executable for our application
+executables:
+  blogful:
+    main: Main.hs
+    source-dirs: app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - blogful
